@@ -1,0 +1,41 @@
+\RequirePackage{tikz}
+\RequirePackage{lmodern}
+
+\useinnertheme[shadow]{rounded}
+\useinnertheme{circles}
+
+\setbeamercolor{block title}{use=structure,fg=white,bg=athblue}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!10!bg}
+
+
+\definecolor{athblue}{RGB}{27,69,153}
+\definecolor{linia}{RGB}{128,0,0}
+
+\setbeamercolor{structure}{fg=athblue}
+
+\pgfdeclareimage[height=25pt]{logo}{imgs/logoUBB}
+
+\setbeamertemplate{frametitle}{%
+ \begin{beamercolorbox}[wd=\paperwidth]{author in head/foot}
+  \begin{tikzpicture}
+   \draw[color=linia,line width=0.5pt] (0.15,0)--(\paperwidth-4,0);
+   \node[right] at (0,0.7) {\parbox{0.7\paperwidth}{\hspace{2pt}\insertframetitle}};
+   \node[left] at (\paperwidth-2,0.65) {\pgfuseimage{logo}};
+  \end{tikzpicture}
+ \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}{%
+ \begin{beamercolorbox}[wd=0.99\paperwidth,leftskip=4pt]{author in head/foot}
+  \begin{tikzpicture}
+  \draw[color=linia,line width=0.5pt] (0.15,0)--(\paperwidth-4,0);
+ \end{tikzpicture}
+ \end{beamercolorbox}
+ \begin{beamercolorbox}[wd=0.99\paperwidth,sep=2pt]{author in head/foot}
+  \hspace{4pt}\insertshortauthor\hfill\insertshorttitle\hfill\insertshortdate\hfill\insertframenumber/\inserttotalframenumber
+ \end{beamercolorbox}
+}
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamercolor{structure}{fg=athblue}
