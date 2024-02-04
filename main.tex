@@ -27,12 +27,12 @@
     Celem tej pracy jest zaprojektowanie i implementacja oprogramowania do przetwarzania obrazów z funkcjonalnym interfejsem graficznym.
     \vspace{1cm}
 
-    Aplikacja wymagała:
+    Wykonane prace:
     \begin{itemize}
-        \item analizy istniejących rozwiązań,
-        \item wyboru technologii,
-        \item zaimplementowanie metod przetwarzania obrazów,
-        \item stworzenie interfejsu graficznego.
+        \item Analiza istniejących rozwiązań,
+        \item Wybór technologii,
+        \item Zaimplementowanie metod przetwarzania obrazów,
+        \item Stworzenie interfejsu graficznego.
     \end{itemize}
 \end{frame}
 
@@ -63,6 +63,13 @@
         \includegraphics[height=3cm]{./imgs/OpenCV.png}
         \captionof{figure}{Przetwarzanie obrazów - OpenCV.}
     \end{columns}
+\end{frame}
+
+\begin{frame}{Architektura}
+    \begin{figure}
+            \includegraphics[width=\linewidth]{./imgs/diagram.png}%
+            \caption{Architektura MVVM.}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Architektura}
@@ -113,14 +120,15 @@
 
 \begin{frame}{Wnioski}
     \begin{itemize}
-        \item Odpowiednia separacja logiki biznesowej i widoku ma znaczenie,
-        \item użytkownik spodziewa się, że program zareaguje natychmiastowo na jego akcje,
-        \item tworzenie narzędzi o takiej dowolności wymaga dużo walidacji,
-        \item edytory węzłowe wymagają solidnej architektury.
+        \item Odpowiednia separacja logiki biznesowej i widoku pozwala na lepszą orgranizację kodu oraz na szybsze wprowadzanie zmian,
+        \item Wymagane jest, aby wynik operacji przetwarzającej obraz był wyświetlany natychmiastowo. Końcowy użytkownik chce widzieć rezultat zmian w czasie rzeczywistym,
+        \item Tworzenie narzędzi do rozwijania wymaga stworzenia przemyślanej architektury,
+        \item Na rynku, mimo popularności edytorów węzłowych do przetwarzania tekstur, nie istnieją aplikacje ściśle związane z przetwarzaniem obrazów,
+        \item Język C\# pozwala na szybkie tworzenie multiplatformowych aplikacji. Wybór biblioteki OpenCV też umożliwił uruchmoienie aplikacji na różnych systemach.
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Obszary do poprawy}
+\begin{frame}{Obszary do rozbudowy}
     \begin{columns}[t]
         \column{.5\textwidth}
         Pomysły z innych edytorów węzłowych:
